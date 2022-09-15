@@ -87,6 +87,7 @@ def main():
     cudnn.benchmark = True
     iteration = 0
     record_mrae_loss = 1000
+    print('training start...')
     while iteration<total_iteration:
         model.train()
         losses = AverageMeter()
