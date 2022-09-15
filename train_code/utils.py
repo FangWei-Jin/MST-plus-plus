@@ -40,7 +40,7 @@ def save_checkpoint(model_path, epoch, iteration, model, optimizer):
         'optimizer': optimizer.state_dict(),
     }
 
-    torch.save(state, os.path.join(model_path, 'net_%depoch.pth' % epoch))
+    torch.save(state, os.path.join(model_path, 'net_%04depoch.pth' % epoch))
 
 class Loss_MRAE(nn.Module):
     def __init__(self):
